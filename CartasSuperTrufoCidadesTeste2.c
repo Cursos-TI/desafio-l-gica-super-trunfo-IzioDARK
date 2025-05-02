@@ -111,14 +111,69 @@ int main(){
 
     //Quem Ganhou na Comparação da Área;
     printf("Maior Área\n");
-    printf("Carta 1 - Maceio(AL): %.3fKm²\n", Área);
-    printf("Carta 2 - Pernambuco(PE): %.3fKm²:\n", área);
+    printf("Carta 1 - Alagoas (AL): %.3fKm²\n", Área);
+    printf("Carta 2 - Pernambuco (PE): %.3fKm²:\n", área);
     if (Área > área) {
-        printf("!!Carta 1 Venceu(Maceio)!!\n");
+        printf("!!Carta 1 Venceu(Alagoas)!!\n");
     } else {
         printf("!!Carta 2 Venceu(Pernambuco)!!\n");
     }
-    
+    printf("\n \n");
 
+    int atributo;
+    
+    printf("### Iniciando o jogo ###\n \n");
+    printf("Menu de Seleção\n \n");
+    printf("Selecione o Atributo!\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    scanf("%d", &atributo);
+
+    switch (atributo)
+    {
+    case 1:
+    printf("População\n");    
+    
+    if (População > população)
+    {
+        printf("A população de Alagoas (%d) é maior que a de Pernambuco (%d) !\n", População, população);
+    } else {
+        printf("A população de Pernambuco (%d) é maior que a de Alagoas (%d) !\n", população, População);
+    }
+    
+    
+    break;
+
+    case 2:
+    printf("Área\n");
+        
+    if (Área > área)
+    {
+        printf("A Área de Alagoas (%.3f Km²) é maior que a de Pernambuco (%.3f Km²)!\n", Área, área);
+    } else {
+        printf("A Área de Pernambuco (%.3f Km²) é maior que a de Alagoas (%.3f Km²)!\n", área, Área);
+    }
+    break;
+
+    case 3:
+    printf("PIB\n");
+
+    if (PIB > pib)
+    {
+        printf("A PIB de Alagoas (R$ %.3f) é maior que o de Pernambuco (R$ %.3f)!\n", PIB, pib);
+    } else {
+        printf("A PIB de Pernambuco (R$ %.3f) é maior que o de Alagoas (R$ %.3f)!\n", pib, PIB);
+    }
+        break;
+
+
+    default:
+        break;
+    }
+    
+   
+    
     return 0;
+
 }
